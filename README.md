@@ -1,8 +1,6 @@
 # Board Management API
 
-```
 A fairly simple but quality REST API project covering essential production patterns, built with FastAPI. Features real-time notifications, role-based access control, email invitations, background job processing, and more.
-```
 
 # Personal notes
 
