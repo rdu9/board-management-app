@@ -1,3 +1,33 @@
+# environment
+.env
+
+# python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# virtual environment
 env/
-__pycache__
-env
+venv/
+.venv/
+
+# ide
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# os
+.DS_Store
+Thumbs.db
+
+# alembic
+alembic.ini.bak
+
+# logs
+*.log
