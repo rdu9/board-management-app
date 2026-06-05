@@ -329,16 +329,8 @@ async def read_all_user_notifications(
 
 @auth_router.websocket("/ws/{user_uid}")
 async def websocket_endpoint(websocket: WebSocket, user_uid: str):
-    # register this user as connected
     await manager.connect(user_uid, websocket)
     try:
-        while True:
-            # this loop keeps the connection alive
-            # receive_text() waits for the client to send something
-            # your client can send a heartbeat ping every 30 seconds
-            # to prevent the connection from timing out
-            data = await websocket.receive_text()
+        data = await websocket.receive_text()
     except WebSocketDisconnect:
-        # client closed the browser tab, lost internet etc.
-        # remove them from active_connections
         manager.disconnect(user_uid)
