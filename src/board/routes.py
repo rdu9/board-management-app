@@ -372,15 +372,3 @@ async def notify_all_board_users(
     if not response:
         return None
     return {"message": "All users have been notified successfully"}
-
-
-# extra:
-# add custom errors ------
-# ratelimiting # ------ 
-# add pagination where needed #------
-# host it
-# add quality of life features
-# add websockets
-# add verify account email system # -----
-# add notification system # -------
-# change all user responses, to clear and clean messages # ----
